@@ -52,7 +52,6 @@ def get_poloniex_dataset(start, end):
 
     return average
 
-
 def main(start_time, end_time):
 
     start = datetime.strptime(start_time, "%Y-%m-%d %H:%M:%S")
@@ -61,36 +60,20 @@ def main(start_time, end_time):
     twitter_ds = get_twitter_dataset(start, end)
     poloniex_ds = get_poloniex_dataset(start, end)
 
-    print (twitter_ds)
 
     if (not twitter_ds.empty):
-        # fig, ax1 = plt.subplots()
-        # t = twitter_ds.index.values
-        # s1 = twitter_ds.iloc[0]
-        # ax1.plot(t, s1, 'b-')
-        # ax1.set_xlabel('time (s)')
-    # Make the y-axis label, ticks and tick labels match the line color.
-        # ax1.set_ylabel('exp', color='b')
-        # ax1.tick_params('y', colors='b')
-
-        # ax2 = ax1.twinx()
-        # s2 = poloniex_ds.iloc[0]
-        # ax2.plot(t, s2, 'r.')
-        # ax2.set_ylabel('sin', color='r')
-        # ax2.tick_params('y', colors='r')
-
-        # fig.tight_layout()
-        # plt.show()
-        ax1 = twitter_ds.plot(
+       ax1 = twitter_ds.plot(
                 kind='line',
                 color='blue')
-        ax2 = ax1.twinx()
-        poloniex_ds.plot(
-                kind = 'line',
-                color ='red',
-                ax=ax2
-                )
-        plt.show()
+       ax1.set_ylabel('Twitter Sentiment', color='b')
+       ax2 = ax1.twinx()
+       ax2.set_ylabel('Bitcoin Price', color='r')
+       poloniex_ds.plot(
+               kind = 'line',
+               color ='red',
+               ax=ax2
+               )
+       plt.show()
     else:
         print('Not enough data for that timeline')
 
