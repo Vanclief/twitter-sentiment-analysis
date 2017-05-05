@@ -43,9 +43,6 @@ def main(start_time, end_time):
         ts = TweetSentiment(data)
         print ('Processing Data...')
         data = ts.analyze()
-
-    # print data['s_compound'].mean()
-    # print data['steam_compound'].mean()
         print ('Done')
         new_data = data.to_dict('records')
 
@@ -60,6 +57,6 @@ def main(start_time, end_time):
 
 if __name__ == '__main__':
     if (len(sys.argv) != 3):
-        print ("ERROR: Usage tweet_sentient.py <start date> <end date>")
+        print ("ERROR: Usage tweet_sentiment.py <start date> <end date>")
     else:
         main(sys.argv[1], sys.argv[2])

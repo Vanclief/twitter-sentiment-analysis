@@ -14,6 +14,14 @@ The goal of this project is to determine if we analyze this publicly available d
 
 ### Dependencies:
 
+* [MongoDB](https://docs.mongodb.com/manual/installation/)
+
+* [Python2.7](https://www.python.org/downloads/)
+
+
+### Install requirements
+`pip install -r requirements.txt`
+
 ## Analysis:
 
 ## Variables to consider:
