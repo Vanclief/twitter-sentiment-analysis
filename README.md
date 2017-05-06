@@ -60,6 +60,8 @@ You can run any of the scripts by itself as long as you give the desired timespa
 
 ## Analysis:
 
+The hypothesis seemed to fail as there is no correlation found yet. However, more analysis has to be made in order to obtain the right configuration parameters and more sampling has to be done.
+
 ## Variables to consider:
 
 * Try another analysis without lowercasing tweets, and allowing ASCII. VADER supports the analysis of words in uppercase and emoticons.
