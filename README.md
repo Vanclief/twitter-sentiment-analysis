@@ -1,6 +1,17 @@
 # CryptoTweetSentiment
 
-This project is focused on performing sentiment analysis for the cryptocurrency bitcoin, but can easily be expanded to other coins. Currently it only gathers data from Twitter.
+The goal of this project was to apply sentiment analysis for cryptocurrency trading. Code is hardcoded to gather twitter data for bitcoin, but that can be easily modified to support other coins. I have abandoned this project, but because of the tracktion it has gotten I will be accepting and merging contributions. If you come up with a profitable strategy, you can always share it with me ;).
+
+Disclamer: Use this under your own risk, this project needs a lot more of work
+before becoming profitable.
+
+## TODO
+
+* Make this a proper package
+
+* Switch Mongo for a real database
+
+* Add threading
 
 ## Justification:
 
@@ -24,7 +35,7 @@ The goal of this project is to determine if we can analyze this publicly availab
 
 ### Collecting tweets
 
-CrytoTweetSentiment TM requires to collect a sample of tweets so it can apply sentiment analysis to it. In order to start collecting Tweets run:
+You will need to collect a sample of tweets before you can apply sentiment analysis. In order to start collecting Tweets run:
 
 `python twitter_streaming.py`
 
@@ -68,8 +79,3 @@ The hypothesis seemed to fail as there is no correlation found yet. However, mor
 
 * The current implementation uses the non-stemmed data, there seemed to be quite a difference between the two.
 
-# Biography
-
-* http://www.cs.cmu.edu/~nasmith/papers/oconnor+balasubramanyan+routledge+smith.icwsm10.pdf
-
-* http://cs229.stanford.edu/proj2015/029_report.pdf
