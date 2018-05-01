@@ -1,45 +1,26 @@
 # CryptoTweetSentiment
 
-The goal of this project was to apply sentiment analysis for cryptocurrency trading. Code is hardcoded to gather twitter data for bitcoin, but that can be easily modified to support other coins. I have abandoned this project, but because of the tracktion it has gotten I will be accepting and merging contributions. If you come up with a profitable strategy, you can always share it with me ;).
+This was my first attempt at applying sentiment analysis for crypto-trading. If you are interested in this, I recommend you check out [this](https://github.com/Vanclief/algo-trading-crypto) instead.
 
-Disclamer: Use this under your own risk, this project needs a lot more of work
-before becoming profitable.
+Code is hardcoded to gather twitter data for bitcoin, but that can be easily modified to support other coins. I have abandoned this project, but feel free to toy with this.
 
-## TODO
-
-* Make this a proper package
-
-* Switch Mongo for a real database
-
-* Add threading
-
-## Justification:
-
-Cryptocurrencies have been on the rise for the past years. Their value is completely defined by speculation of how much they can be worth. As such their exchange rates are very volatile, and very unpredictable.
-
-Twitter is one of the most popular social media networks there is, and it's an outlet through which millions of people broadcast their thoughts, fears and opinions on any topic of their interest.
-
-The goal of this project is to determine if we can analyze this publicly available data to develop cryto trading strategies or algorithms that are profitable.
-
-## Documentation:
-
-### Dependencies:
+## Dependencies:
 
 * [MongoDB](https://docs.mongodb.com/manual/installation/)
 
 * [Python2.7](https://www.python.org/downloads/)
 
 
-### Install requirements
+## Install requirements
 `pip install -r requirements.txt`
 
-### Collecting tweets
+## Collecting tweets
 
 You will need to collect a sample of tweets before you can apply sentiment analysis. In order to start collecting Tweets run:
 
 `python twitter_streaming.py`
 
-### Analysing tweets
+## Analysing tweets
 
 Once you have collected enough information for the desired dateframe, you can run the main file. Main will call the necessary scripts in order to clean, analyze and graph the data.
 
@@ -68,14 +49,3 @@ This will:
 * Graph the price of bitcoin between the timespan of the collected tweets against the mean of the sentiment of the tweets
 
 You can run any of the scripts by itself as long as you give the desired timespan.
-
-## Analysis:
-
-The hypothesis seemed to fail as there is no correlation found yet. However, more analysis has to be made in order to obtain the right configuration parameters and more sampling has to be done.
-
-## Variables to consider:
-
-* Try another analysis without lowercasing tweets, and allowing ASCII. VADER supports the analysis of words in uppercase and emoticons.
-
-* The current implementation uses the non-stemmed data, there seemed to be quite a difference between the two.
-
